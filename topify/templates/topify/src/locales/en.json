@@ -1,0 +1,23 @@
+{
+  "process_table": {
+    "pid": "The process ID.",
+    "username": "The username of the process owner, or the user ID if the name can't be determined.",
+    "nice": "The  nice  value of a process, from 19 (low priority) to -20 (high priority). A high value means the process is being nice, letting others have a higher relative priority. The usual OS permission restrictions for adjusting priority apply.",
+    "status": "The status of the process.",
+    "cpu_percent": "The percentage of the CPU time that the process is currently using.",
+    "memory_percent": "The percentage of memory the process is currently using based on the process's resident set size, see Physical Memory (RSS).",
+    "cpu_times": "The time, measured in clock ticks that the process has spent in user time, system time, children user time and children system time.",
+    "memory_vms": "The size of the virtual memory of the process.",
+    "memory_rss": "The resident set size (text + data + stack) of the process (i.e. the size of the process's used physical memory).",
+    "name": "The program name.",
+    "cmdline": "The full command line of the process (i.e. program name and arguments)."
+  },
+  "container_table": {
+    "name": "The container name.",
+    "short_id": "The container short ID (12 characters). Base IDs are 64 character SHA-256.",
+    "state": "The state of the container.",
+    "status": "The status of the container.",
+    "image": "The base image the container is based upon.",
+    "cmd": "The default command which will be executed after the entrypoint."
+  }
+}

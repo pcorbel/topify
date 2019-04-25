@@ -1,0 +1,16 @@
+---
+version: "3"
+services:
+  topify:
+    container_name: "topify"
+    image: "pcorbel/topify:v0.1.0"
+    environment:
+      - "REFRESH_INTERVAL=1000"
+    pid: "host"
+    network_mode: "host"  # Used to get the host name
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"  # Used to access the docker host API 
+      - "/etc/os-release:/etc/os-release:ro"  # Used to get the host distro
+      - "/etc/passwd:/etc/passwd:ro"  # Used to get host processes owners
+      - "/etc/group:/etc/group:ro"  # Used to get host processes owners
+    restart: "always"
