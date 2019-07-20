@@ -1,5 +1,5 @@
 # First stage: Frontend
-FROM library/node:11.7.0-alpine AS front_builder
+FROM node:11.7.0-alpine AS front_builder
 
 # Install dependencies
 WORKDIR /app
@@ -13,9 +13,7 @@ COPY topify/templates/topify /app
 RUN npm run build
 
 # Final stage
-FROM __BASEIMAGE_ARCH__/python:3.7-alpine
-
-__CROSS_COPY builder/package/qemu/qemu-__QEMU_ARCH__-static /usr/bin/
+FROM python:3.7-alpine
 
 WORKDIR /app
 ENV REFRESH_INTERVAL 3000
