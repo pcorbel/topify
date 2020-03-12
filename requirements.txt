@@ -4,5 +4,5 @@ docker==3.7.2
 Flask==1.0.2
 flask-cors==3.0.7
 flask-restplus==0.12.1
-psutil==5.6.1
+psutil==5.6.6
 py-cpuinfo==5.0.0
