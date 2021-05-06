@@ -2,7 +2,7 @@ diskcache==3.1.1
 distro==1.4.0
 docker==3.7.2
 Flask==1.0.2
-flask-cors==3.0.7
+flask-cors==3.0.9
 flask-restplus==0.12.1
 psutil==5.6.1
 py-cpuinfo==5.0.0
